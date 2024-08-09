@@ -1,17 +1,26 @@
 import React from 'react'
-import gsap from 'gsap'
+
 
 const service = () => {
 
+ 
 
   return (
-    <div className='h-screen flex justify-center items-center'>
-        <div className="mainphoto h-[70%] w-[50%] rounded-lg mx-[10vw] relative">
+    <div className='h-[120vh] w-screen flex justify-center items-center relative'>
+        <div className="mainphoto h-[80vh] w-[50%] rounded-lg mx-[10vw] relative">
             <img src="./me/stand.webp" alt="" className='h-full w-full object-cover rounded-lg '/>
-            <div className="service absolute h-[60%] w-[50%] bg-gray-100 rounded-lg z-10 top-[-20%] left-[-40%]"></div>
-            <div className="service absolute h-[80%] w-[60%] bg-gray-200 rounded-lg z-10 top-[-16%] right-[-30%]"></div>
-            <div className="service absolute h-[80%] w-[70%] bg-gray-300 rounded-lg z-10"></div>
-            <div className="service absolute h-[80%] w-[70%] bg-gray-400 rounded-lg z-10"></div>
+        </div>
+        <div className="sercont h-[30vh] aspect-video bg-purple-500 absolute left-[10vw] top-[10vh]">
+          <h1>UI/UX Designer</h1>
+        </div>
+        <div className="sercont absolute left-[6vw] bottom-[14vh] h-[40vh] aspect-video bg-slate-600">
+          <h1>Web Devoleper</h1>
+        </div>
+        <div className="sercont absolute h-[45vh] aspect-video bg-red-500 top-[12vh] right-[6vw]">
+          <h1>Photoshop</h1>
+        </div>
+        <div className="sercont absolute h-[30vh] aspect-video bg-amber-500 right-[10vw] bottom-[8vh]">
+          <h1>Graphic designer</h1>
         </div>
     </div>
   )

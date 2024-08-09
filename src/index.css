@@ -3,18 +3,41 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
-*{
 
-
-}
 body{
-    overflow-x: hidden; 
-     background-color: black;
+  overflow-x: hidden; 
   padding: 0;
   margin: 0;
   font-family: "Abel", sans-serif;
 }
-.orangeblur{
-  background: radial-gradient(rgba(255, 0, 0, 0), rgb(255, 255, 255));
+.actions button{
+  padding: 8px 22px 8px 22px;
+  border:2px solid black;
+  border-radius: 50vw;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+.actions button:hover{
+color: white;
+background-color: black;
+transform: translateY(4px);
 }
 
+.protitle{
+  mix-blend-mode:difference;
+  color: white;
+}
+.sercont{
+  background-color: rgb(196, 196, 196);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sercont h1{
+  font-size: 22px;
+}
+.title{
+  font-size: 80px;
+}

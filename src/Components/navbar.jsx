@@ -34,9 +34,9 @@ const Navbar = () => {
         <img src="" alt="" />
       </div>
       <div className="right flex gap-10 items-center">
-        <div className="text-white">About Me</div>
-        <div className="text-white"> Projects</div>
-        <div className="text-white">Contact Me</div>
+        <div className="text-whte">About Me</div>
+        <div className="text-whie"> Projects</div>
+        <div className="text-whit">Contact Me</div>
       </div>
     </div>
   );
