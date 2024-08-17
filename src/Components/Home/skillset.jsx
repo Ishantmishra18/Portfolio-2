@@ -6,26 +6,35 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Skillset = () => {
 
+  const Skills=['react','js','html','css','gsap','figma','express']
+
   useEffect(() => {
-    gsap.to('.service1 .skillslund', {
-      xPercent: -75, // Move the element to the left by 100%
+    // Setup animation
+    const animation = gsap.to('.service1 .skills', {
+      xPercent: -50,
       scrollTrigger: {
         trigger: '.service1',
         start: 'top top',  // Animation starts when .service1 is at the top of the viewport
-        end: 'top -100%',
-             // Animation ends when scrolling an additional 100% of the viewport height
-        scrub: 2,       // Sync animation with the scroll position
-        markers: true,     // Show markers for debuggin
-        
+        end: 'top -200%',  // Animation ends when scrolling an additional 200% of the viewport height
+        scrub: 2,          // Sync animation with the scroll positio     // Show markers for debugging
+        pin: true
       },
     });
-  }, []);
+
+    // Refresh ScrollTrigger instance on component mount
+    ScrollTrigger.refresh();
+
+    // Cleanup function to remove ScrollTrigger instance
+    return () => {
+      animation.scrollTrigger.kill();
+    };
+  }, []); // Empty dependency array ensures this effect runs only once on mount
 
   return (
-    <div className='service1 h-[100vh] w-screen overflow-x-hidden' id='ser'>
-      <h1 className='title'>Skill Set</h1>
-      <div className="skillslund w-[250vw] h-[40vh] bg-cyan-800 text-black text-[300px] whitespace-nowrap">
-        Hello everyone, how are you guys?
+    <div className="service1 h-[100vh] bg-black w-screen bg-cover overflow-x-hidden flex flex-col justify-between py-[10%]" id='ser'>
+      <h1 className='title mx-auto'>Skill Set</h1>
+      <div className="skills w-[200vw] h-[20vh] bg-neutral-800 border-b-2 border-yellow-600 text-black text-[160px] flex justify-around items-center px-4">
+          <h1 className=' text-nowrap leading-[20vh] text-neutral-400 scale-y-150 font-semibold'>have an Idea connect me I will build</h1>
       </div>
     </div>
   );

@@ -33,10 +33,10 @@ const Navbar = () => {
       <div className="logo flex">
         <img src="" alt="" />
       </div>
-      <div className="right flex gap-10 items-center">
-        <div className="text-whte">About Me</div>
-        <div className="text-whie"> Projects</div>
-        <div className="text-whit">Contact Me</div>
+      <div className="navright flex gap-10 items-center">
+        <div className="mix-blend-darken">About Me</div>
+        <div className="mix-blend-darken"> Projects</div>
+        <div className="mix-blend-darken">Contact Me</div>
       </div>
     </div>
   );
