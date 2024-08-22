@@ -31,10 +31,10 @@ const Skillset = () => {
   }, []); // Empty dependency array ensures this effect runs only once on mount
 
   return (
-    <div className="service1 h-[100vh] bg-black w-screen bg-cover overflow-x-hidden flex flex-col justify-between py-[10%]" id='ser'>
+    <div className="service1 h-[60vh] bg-black w-screen bg-cover overflow-x-hidden flex flex-col justify-between pb-[10%]" id='ser'>
       <h1 className='title mx-auto'>Skill Set</h1>
-      <div className="skills w-[200vw] h-[20vh] bg-neutral-800 border-b-2 border-yellow-600 text-black text-[160px] flex justify-around items-center px-4">
-          <h1 className=' text-nowrap leading-[20vh] text-neutral-400 scale-y-150 font-semibold'>have an Idea connect me I will build</h1>
+      <div className="skills w-[200vw] h-[20vh] bg-neutral-800  text-black text-[160px] flex justify-around items-center px-4">
+          <h1 className=' text-nowrap leading-[20vh] text-neutral-400 scale-y-150 font-'>have an Idea?... let's build together</h1>
       </div>
     </div>
   );

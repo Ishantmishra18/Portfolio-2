@@ -28,16 +28,15 @@ const Projects = () => {
     return (
         <div className='h-auto proPage w-screen rounded-t-[60px] text-white pt-[10vh]'>
             <div className="protitle w-screen h-[40vh] rounded-t-[60px] absolute text-[6vw] text-white bg-neutral-900 flex flex-col items-center">
-                <h1 className="uppercase font-semibold">project</h1>
+                <h1 className="uppercase">projects</h1>
             </div>
             {projects.map((val, key) => (
                 <div
                     key={key}
-                    className={`pro h-auto py-10 w-screen relative px-[4%] flex bg-neutral-900 flex-col bg-cover items-end ${key === 0 ? 'rounded-t-[60px]' : ''}`}
-                    style={{ backgroundImage: `url(/pro/${key + 1}.web)` ,  }}
+                    className={`pro h-auto py-10 w-screen relative px-[4%] flex bg-neutral-900 flex-col bg-cover  ${key === 0 ? 'rounded-t-[60px]' : ''} ${key%2===0?'items-start':'items-end'}`}
                 >
                   <div className="overlay absolute inset-0 bg-black blur-2xl opacity-80 rounded-t-[60px]"></div>
-                    <div className="proname pointer-events-none sticky top-[50%] right-[80vw] text-[6vw] z-30">{val}</div>
+                    <div className={`proname pointer-events-none sticky top-[50%]  text-[6vw] z-30 ${key%2===0?'left-[80vw]':'right-[80vw]'}`}>{val}</div>
                     <div className="procont flex flex-col items-center bg-neutral-700 bg-opacity-25 backdrop-blur-lg pt-10 rounded-xl w-[70vw]">
                         <div className={`viewpro absolute h-[7vw] aspect-square bg-purple-700 rounded-full grid place-content-center ${view ? 'opacity-100' : 'opacity-0'}`}>View</div>
                         <div className="imgcont w-[85%]" onMouseEnter={handleView} onMouseLeave={handleView}>

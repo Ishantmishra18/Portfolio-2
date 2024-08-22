@@ -26,7 +26,7 @@ const service = () => {
 })
 
   return (
-    <div className='servicePage h-[120vh] py-[10%] w-screen flex flex-col justify-between items-center relative'>
+    <div className='servicePage h-[120vh] py-[10%] bg-neutral-950 w-screen flex flex-col justify-between items-center relative'>
      
         <div className="mainphoto h-[80vh] w-[50%] rounded-lg mx-[10vw] relative">
             <img src="./me/stand.webp" alt="" className='h-full w-full object-cover rounded-lg '/>
