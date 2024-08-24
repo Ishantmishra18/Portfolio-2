@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import React from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { FaGithub } from "react-icons/fa6";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,19 +41,26 @@ const Projects = () => {
                     <div className={`proname pointer-events-none sticky top-[50%]  text-[6vw] z-30 ${key%2===0?'left-[80vw]':'right-[80vw]'}`}>{val}</div>
                     <div className="procont flex flex-col items-center bg-neutral-700 bg-opacity-25 backdrop-blur-lg pt-10 rounded-xl w-[70vw]">
                         <div className={`viewpro absolute h-[7vw] aspect-square bg-purple-700 rounded-full grid place-content-center ${view ? 'opacity-100' : 'opacity-0'}`}>View</div>
-                        <div className="imgcont w-[85%]" onMouseEnter={handleView} onMouseLeave={handleView}>
-                            <img src={`/pro/${key + 1}.png`} alt="" className='w-full rounded-xl' />
+                        
+                        <div className="imgcont w-[100%] overflow-hidden relative" onMouseEnter={handleView} onMouseLeave={handleView}>
+                            <div className="github z-20 h-[5vw] w-[5vw] grid  absolute bottom-4 left-16 bg-neutral-800 cursor-pointer shadow-neutral-900 shadow-lg p-1 rounded-full hover:scale-[1.05] duration-200">
+                            <FaGithub className="h-full w-full"/>
+                            </div>
+                            <img src={`/pro/${key + 1}.png`} alt="" className='w-full rounded-x hover:scale-[1.05] z-10 duration-200' />
                         </div>
-                        <div className="prodown w-[85%] h-auto bg-purple-80 py-5 flex flex-col items-start gap-10">
-                            <h1 className="text-[3vw] text-white">About Project</h1>
-                            <p className="text-white text-[1.2vw]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam illo enim dolorem tempora at odit voluptas quae iusto adipisci aliquid, sequi, consectetur iste eius est fugit velit vitae. Ducimus, cupiditate.</p>
-                            <div className="prodes flex w-full justify-between">
-                                <div className="techstack px-6 py-2 bg-black rounded-2xl">TECH STACK:
+                        <div className="prodown w-[100%] h-auto bg-purple-80 py-5 flex flex-col items-start">
+                            <h1 className="text-xl text-neutral-700 mt-2 px-10 uppercase">About Project</h1>
+                            <p className="text-neutral-400 text-[1.5vw] mt-1 px-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam illo enim dolorem tempora at odit voluptas quae iusto adipisci aliquid, sequi, consectetur iste eius est fugit velit vitae. Ducimus, cupiditate.</p>
+                            <div className="prodes mt-10 border-t-2 border-neutral-800 px-10 pt-10 flex w-full justify-start gap-32">
+                                <div className="techstack py-2  rounded-2xl text-[1.5vw] text-neutral-400"><span className="text-neutral-700 text-xl mr-4">TECH STACK:</span>
                                     html css js gsap express
                                 </div>
-                                <div className="github h-full aspect-square bg-black rounded-lg">
-                                    {/* GitHub link or icon here */}
+                                <div className="role">
+                                <div className="techstack py-2  rounded-2xl text-[1.5vw] text-neutral-400"><span className="text-neutral-700 text-xl mr-4">ROLE:</span>
+                                    Front-end Deveopler 
                                 </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>

@@ -16,19 +16,18 @@ const service = () => {
     delay:0.5,
     stagger:0.1,
     scrollTrigger:{
-      trigger:".servicePage",
-      start:'10% center',
+      trigger:".sertitle",
+      start:'top top',
       end:'top center',
       scrub:2
-
     }
   })
 })
 
   return (
-    <div className='servicePage h-[120vh] py-[10%] bg-neutral-950 w-screen flex flex-col justify-between items-center relative'>
-     
-        <div className="mainphoto h-[80vh] w-[50%] rounded-lg mx-[10vw] relative">
+    <div className='servicePage h-[150vh] pb-[10%] pt-[5%] bg-neutral-950 w-screen flex flex-col justify-between items-center relative'>
+<div className="sertitle text-white text-[6vw] uppercase">Service I offer</div>
+        <div className="mainphoto h-[80vh] w-[50%] rounded-lg mx-[30vw] relative">
             <img src="./me/stand.webp" alt="" className='h-full w-full object-cover rounded-lg '/>
 
             <div className="sercont h-[30vh] aspect-video bg-purple-500 absolute left-[-10vw] top-[-10vh]">

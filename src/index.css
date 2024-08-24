@@ -18,9 +18,8 @@ body {
 .navright div{
 
 mix-blend-mode: difference;
-z-index: 20;
-padding: 4px 13px 4px 13px;
-border-radius: 32px;
+color: white;
+z-index: 100;
 
 }
 .left h1{
@@ -81,8 +80,8 @@ transform: scale(1.1);
   box-shadow: 3px 4px 6px rgb(154, 154, 154);
 }
 .formcont{
-  box-shadow: 2px 2px 5px rgb(108, 108, 108) ;
-  border-radius: 5px;
+  border-bottom: 1px solid black;
+  border-radius: 0px;
   outline: none;
 
 
@@ -93,4 +92,19 @@ transform: scale(1.1);
 
 .skills{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.chesscont{
+  filter:grayscale(1) ;
+  background-color: black;
+  
+  box-shadow: 2px 3px 4px inset rgb(224, 0, 0);
+}
+.chesscont h2{
+  z-index: 20;
+  font-size: 4vw;
+  color: white;
+  font-weight: 100;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  mix-blend-mode: difference;
 }

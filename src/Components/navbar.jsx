@@ -16,7 +16,7 @@ const Navbar = () => {
         setShowNavbar(true);
       }
 
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`backdrop-blur-lg w-screen h-[12vh] flex justify-between px-12 items-center z-50 fixed transition-top duration-300 ${showNavbar ? 'top-0' : '-translate-y-[100%]'}`}
+      className={`backdrop-blur-lg w-screen mix-blend-difference h-[12vh] flex justify-between px-12 items-center z-50 fixed transition-top duration-300 ${showNavbar ? 'top-0' : '-translate-y-[100%]'}`}
     >
       <div className="logo flex">
         <img src="" alt="" />
