@@ -91,14 +91,12 @@ transform: scale(1.1);
 }
 
 .skills{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family:sans-serif;
 }
 
 .chesscont{
   filter:grayscale(1) ;
   background-color: black;
-  
-  box-shadow: 2px 3px 4px inset rgb(224, 0, 0);
 }
 .chesscont h2{
   z-index: 20;
@@ -107,4 +105,42 @@ transform: scale(1.1);
   font-weight: 100;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   mix-blend-mode: difference;
+}
+
+.uptext, .downtext {
+  position: block; 
+}
+
+.social div h1{
+  color: black;
+  opacity: 0;
+  transition: 0.4s;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  
+}
+.social div:hover h1 {
+  opacity: 1;
+  transform: translate(-50%,13px );
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 30;
+  pointer-events: none;
+  background: linear-gradient(70deg,  rgb(0, 0, 0), rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgb(0, 0, 0));
 }

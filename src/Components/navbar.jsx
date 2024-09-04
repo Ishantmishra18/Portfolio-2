@@ -28,10 +28,10 @@ const Navbar = () => {
 
   return (
     <div
-      className={`backdrop-blur-lg w-screen mix-blend-difference h-[12vh] flex justify-between px-12 items-center z-50 fixed transition-top duration-300 ${showNavbar ? 'top-0' : '-translate-y-[100%]'}`}
+      className={`backdrop-blur-l w-screen mix-blend-difference h-[12vh] flex justify-between px-12 items-center z-50 fixed transition-top duration-300 ${showNavbar ? 'top-0' : '-translate-y-[100%]'}`}
     >
-      <div className="logo flex">
-        <img src="" alt="" />
+      <div className="logo h-full aspect-square">
+        <img src="/feature/logo.png" alt="" className='h-full w-full' />
       </div>
       <div className="navright flex gap-10 items-center">
         <div className="mix-blend-darken">About Me</div>

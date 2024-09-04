@@ -1,43 +1,76 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useRef, useEffect } from 'react';
+import { FaReact, FaNodeJs } from 'react-icons/fa';
+import { SiMongodb, SiTailwindcss, SiAdobephotoshop, SiExpress, SiJavascript } from 'react-icons/si';
+import { GiFilmSpool } from 'react-icons/gi'; // GSAP icon alternative
 
-gsap.registerPlugin(ScrollTrigger);
+
+const skills = [
+  { name: 'React', icon: <FaReact className="text-blue-500" /> },
+  { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" /> },
+  { name: 'MongoDB', icon: <SiMongodb className="text-green-500" /> },
+  { name: 'GSAP', icon: <GiFilmSpool className="text-green-400" /> },
+  { name: 'Express', icon: <SiExpress className="text-gray-300" /> },
+  { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
+  { name: 'Photoshop', icon: <SiAdobephotoshop className="text-blue-300" /> },
+  { name: 'JavaScript', icon: <SiJavascript className="text-yellow-500" /> },
+];
 
 const Skillset = () => {
-
-  const Skills=['react','js','html','css','gsap','figma','express']
+  const sliderRef = useRef(null);
 
   useEffect(() => {
-    // Setup animation
-    const animation = gsap.to('.service1 .skills', {
-      xPercent: -50,
-      scrollTrigger: {
-        trigger: '.service1',
-        start: 'top top',  // Animation starts when .service1 is at the top of the viewport
-        end: 'top -200%',  // Animation ends when scrolling an additional 200% of the viewport height
-        scrub: 2,          // Sync animation with the scroll positio     // Show markers for debugging
-        pin: true
-      },
-    });
+    const slider = sliderRef.current;
+    let scrollAmount = 0;
+    const scrollStep = 1;
 
-    // Refresh ScrollTrigger instance on component mount
-    ScrollTrigger.refresh();
-
-    // Cleanup function to remove ScrollTrigger instance
-    return () => {
-      animation.scrollTrigger.kill();
+    const slide = () => {
+      if (slider) {
+        scrollAmount += scrollStep;
+        if (scrollAmount >= slider.scrollWidth / 2) {
+          scrollAmount = 0;
+        }
+        slider.scrollTo({
+          left: scrollAmount,
+          behavior: 'auto',
+        });
+      }
     };
-  }, []); // Empty dependency array ensures this effect runs only once on mount
+
+    let interval = setInterval(slide, 10);
+
+    const handleMouseOver = () => clearInterval(interval);
+    const handleMouseOut = () => (interval = setInterval(slide, 10));
+
+    slider.addEventListener('mouseover', handleMouseOver);
+    slider.addEventListener('mouseout', handleMouseOut);
+
+    return () => {
+      clearInterval(interval);
+      slider.removeEventListener('mouseover', handleMouseOver);
+      slider.removeEventListener('mouseout', handleMouseOut);
+    };
+  }, []);
 
   return (
-    <div className="service1 h-[60vh] bg-black w-screen bg-cover overflow-x-hidden flex flex-col justify-between pb-[10%]" id='ser'>
-      <h1 className='title mx-auto'>Skill Set</h1>
-      <div className="skills w-[200vw] h-[20vh] bg-neutral-800  text-black text-[160px] flex justify-around items-center px-4">
-          <h1 className=' text-nowrap leading-[20vh] text-neutral-400 scale-y-150 font-'>have an Idea?... let's build together</h1>
+    <div className="bg-neutral-900 p-8 py-[14vh] overflow-hidden relative border-b-2 border-t-2 border-neutral-500">
+        <div className="gradient-overlay"></div>
+        <div className="bgtext h-full w-full flex justify-center translate-y-12 text-[8vw] absolute uppercase text-neutral-800 font-semibold">toolkit</div>
+      <div
+        ref={sliderRef}
+        className="flex gap-8 overflow-x-scroll overflow-y-hidden no-scrollbar whitespace-nowrap"
+      >
+        {[...skills, ...skills].map((skill, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center p-6 rounded-lg bg-neutral-800 backdrop-blur-sm bg-opacity-40 shadow-lg min-w-[150px] min-h-[150px] transition-transform duration-300 transform hover:scale-110 hover:shadow-2xl"
+          >
+            <div className="text-6xl mb-3 animate-pulse">{skill.icon}</div>
+            <h3 className="text-xl text-white font-semibold">{skill.name}</h3>
+          </div>
+        ))}
       </div>
     </div>
   );
-}
+};
 
 export default Skillset;
