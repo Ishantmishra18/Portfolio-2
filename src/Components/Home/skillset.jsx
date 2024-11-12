@@ -3,7 +3,6 @@ import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiMongodb, SiTailwindcss, SiAdobephotoshop, SiExpress, SiJavascript } from 'react-icons/si';
 import { GiFilmSpool } from 'react-icons/gi'; // GSAP icon alternative
 
-
 const skills = [
   { name: 'React', icon: <FaReact className="text-blue-500" /> },
   { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" /> },
@@ -52,20 +51,22 @@ const Skillset = () => {
   }, []);
 
   return (
-    <div className="bg-neutral-900 p-8 py-[14vh] overflow-hidden relative border-b-2 border-t-2 border-neutral-500">
-        <div className="gradient-overlay"></div>
-        <div className="bgtext h-full w-full flex justify-center translate-y-12 text-[8vw] absolute uppercase text-neutral-800 font-semibold">toolkit</div>
+    <div className="bg-neutral-900 p-8 md:py-[14vh] py-[4vh] overflow-hidden relative border-b-2 border-t-2 border-neutral-500">
+      <div className="gradient-overlay"></div>
+      <div className="bgtext h-full w-full flex justify-center translate-y-12 text-[8vw] absolute uppercase text-neutral-800 font-semibold">
+        toolkit
+      </div>
       <div
         ref={sliderRef}
-        className="flex gap-8 overflow-x-scroll overflow-y-hidden no-scrollbar whitespace-nowrap"
+        className="flex gap-4 overflow-x-scroll overflow-y-hidden no-scrollbar whitespace-nowrap"
       >
         {[...skills, ...skills].map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-6 rounded-lg bg-neutral-800 backdrop-blur-sm bg-opacity-40 shadow-lg min-w-[150px] min-h-[150px] transition-transform duration-300 transform hover:scale-110 hover:shadow-2xl"
+            className="flex flex-col items-center p-4 rounded-lg bg-neutral-800 backdrop-blur-sm bg-opacity-40 shadow-lg min-w-[100px] min-h-[100px] md:min-w-[150px] md:min-h-[150px] transition-transform duration-300 transform hover:scale-110 hover:shadow-2xl"
           >
-            <div className="text-6xl mb-3 animate-pulse">{skill.icon}</div>
-            <h3 className="text-xl text-white font-semibold">{skill.name}</h3>
+            <div className="text-4xl md:text-6xl mb-2 animate-pulse">{skill.icon}</div>
+            <h3 className="text-sm md:text-xl text-white font-semibold">{skill.name}</h3>
           </div>
         ))}
       </div>
