@@ -42,10 +42,23 @@ const LandingPage = () => {
     });
   }, []);
 
+  // Function to handle downloading the CV
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/files/resume.pdf';  // Path to your CV file
+    link.download = 'Ishant_Mishra_CV.pdf';  // File name for the download
+    link.click();
+  };
+
+  // Function to handle sending a message (opens Gmail)
+  const handleSendMessage = () => {
+    window.location.href = 'mailto:ishant8mishra@gmail.com';  // Opens Gmail with pre-filled email
+  };
+
   return (
-    <div className=" select-none bg-white overflow-x-hidden w-screen h-screen md:pt-[18vh] pt-[10vh] md:pb-0 pb-[6vh] flex flex-col justify-between">
+    <div className="select-none bg-white overflow-x-hidden w-screen h-screen md:pt-[18vh] pt-[10vh] md:pb-0 pb-[6vh] flex flex-col justify-between">
       <div className="landcont flex flex-col md:flex-row items-start justify-between px-[5%]">
-        <div className="landleft  w-auto relative z-30 mix-blend-difference text-white">
+        <div className="landleft w-auto relative z-30 mix-blend-difference text-white">
           <h1 className="textup text-[14vw] md:text-[7vw] leading-[15vw] md:leading-[10vw] uppercase ml-4 md:ml-32 tracking-tighter scale-y-12 mix-blend-difference whitespace-nowrap">
             I create
           </h1>
@@ -63,9 +76,9 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="actions w-screen h-[20vh] border-t-[1.5px] border-gray-400 flex flex-col md:flex-row pt-2 justify-around items-center gap-4 md:gap-0">
-        <Button label="download CV" className="h-[6vh] md:h-[8vh]" />
-        <button className="text-[5vw] md:text-base">hire me!</button>
-        <button className="text-[5vw] md:text-base">send me a message</button>
+        <Button label="download CV" className="h-[6vh] md:h-[8vh]" onClick={handleDownloadCV} />
+        <button className="text-[5vw] md:text-base" onClick={handleSendMessage}>hire me!</button>
+        <button className="text-[5vw] md:text-base" onClick={handleSendMessage}>send me a message</button>
       </div>
     </div>
   );

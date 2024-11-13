@@ -3,16 +3,34 @@ import { useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaGithub } from "react-icons/fa6";
+import { TbView360 } from "react-icons/tb";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
-    const projects = ['GameGuide', 'theMatrix', 'theLastRegret'];
-    const [view, setView] = useState(false);
+    const projects = [{
+        name:'Fugin',
+        subtitle:'Game guide',
+        des:"Developed a sleek and immersive game guide using React.js and GSAP, featuring fluid animations and an engaging UI/UX design. each interaction is designed to be smooth and responsive, creating a captivating interface that enhances user engagement and accessibility.",
+        github:'https://github.com/Ishantmishra18/WutheringGuide',
+        hosted:'https://wuthering-guide-moq2.vercel.app/',
+        date:'Jun - Aug 2024',
+        techstack:'JavaScript React Gsap Figma',
+        role:'Front-End Developer'
 
-    const handleView = () => {
-        setView(!view);
-    };
+    },{
+        name:'Travo',
+        subtitle:'Home Rent',
+        des:"A modern room rental platform built with the MERN stack that allows users to list, search, and book rooms seamlessly. The platform features an intuitive user interface, real-time booking management, and secure user authentication. With fully integrated payment options and responsive design, this application offers a smooth and secure experience for both hosts and guests.",
+        github:'https://github.com/Ishantmishra18/fullHomeRent',
+        hosted:'',
+        date:'Nov 2024 - going...',
+        techstack:'ReactJs NodeJs Express MongoDB',
+        role:'Full Stack Developer'
+    } 
+]
+
+
 
     useEffect(() => {
         gsap.to('.protitle', {
@@ -37,29 +55,36 @@ const Projects = () => {
                     className={`pro h-auto py-10 w-screen relative px-[4%] flex flex-col md:${key % 2 === 0 ? 'items-start' : 'items-end'} items-center`}
                 >
 
-                    <div className={`proname pointer-events-none md:sticky block top-[50%] text-[8vw] md:text-[6vw] z-30 flex flex-col ${key%2===0?'left-[80vw] items-end':'right-[80vw] items-start'}`}>
-                        <h2>{val}</h2>
-                        <h2 className="date text-[4vw] md:text-[1.2vw] text-neutral-600 md:mt-[-3vh] mt-[-1vh]">2020 Aug</h2>
+                    <div className={`proname pointer-events-none md:sticky top-[30%] text-[8vw] md:text-[6vw] z-30 flex flex-col ${key%2===0?'left-[80vw] items-end':'right-[80vw] items-start'}`}>
+                        <h2 className='uppercase'>{val.name}</h2>
+                        <h2 className='text-[6vw] md:text-[4vw] md:mt-[-3vh] mt-[-1vh]'>{val.subtitle}</h2>
+                        <h2 className="date text-[4vw] md:text-[1.4vw] text-neutral-600 md:mt-[-3vh] mt-[-1vh]">{val.date}</h2>
                     </div>
                     <div className="procont overflow-x-hidden flex flex-col items-center bg-neutral-700 bg-opacity-25 backdrop-blur-lg pt-10 rounded-xl w-[96vw] md:w-[70vw]">
-                        <div className={`viewpro absolute h-[10vw] md:h-[7vw] aspect-square rounded-full grid place-content-center ${view ? 'opacity-100' : 'opacity-0'}`}>View</div>
-                        <div className="imgcont w-full md:h-[70vh] h-[40vh] overflow-hidden relative" onMouseEnter={handleView} onMouseLeave={handleView}>
-                            <div className="github z-20 h-[10vw] md:h-[5vw] w-[10vw] md:w-[5vw] grid absolute bottom-4 left-4 md:left-16 bg-neutral-800 cursor-pointer shadow-neutral-900 shadow-lg p-1 rounded-full hover:scale-[1.05] duration-200">
-                                <FaGithub className="h-full w-full" />
+                       
+                        <div className="imgcont w-full md:h-[70vh] h-[40vh] overflow-hidden relative">
+                            <div className="absolute h-[20%] w-64 z-30 bottom-0 left-0 flex p-3 gap-2">
+                                <a href={val.github} target="_blank" className="gitcont h-full aspect-square rounded-full p-1 bg-neutral-800 hover:translate-y-2 duration-300 cursor-pointer">
+                                    <FaGithub className='h-full w-full'/>
+                                </a>
+                                <a href={val.hosted} target="_blank" className={`gitcont h-full aspect-square rounded-full p-2 bg-neutral-800 ${val.hosted===''?'hidden':''} hover:translate-y-2 duration-300 cursor-pointer`}>
+                                    <TbView360 className='h-full w-full'/>
+                                </a>
                             </div>
+                        
                             <img src={`/pro/${key + 1}.png`} alt="" className='w-full h-full object-cover hover:scale-[1.01] z-10 duration-200' />
                         </div>
                         <div className="prodown w-[100%] h-auto bg-purple-80 py-5 flex flex-col items-start">
                             <h1 className="text-[14px] md:text-xl text-neutral-700 mt-2 px-4 md:px-10 uppercase">About Project</h1>
-                            <p className="text-[4vw] md:text-[1.5vw] text-neutral-400 mt-1 px-4 md:px-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam illo enim dolorem tempora at odit voluptas quae iusto adipisci aliquid, sequi, consectetur iste eius est fugit velit vitae. Ducimus, cupiditate.</p>
+                            <p className="text-[4vw] md:text-[1.5vw] text-neutral-400 mt-1 px-4 md:px-10">{val.des}</p>
                             <div className="prodes md:mt-10 mt-4 md:pt-10 pt-4 border-t-2 border-neutral-800 px-4 md:px-10  flex flex-col md:flex-row w-full justify-start md:justify-start gap-4 md:gap-32">
                                 <div className="techstack py-2 rounded-2xl text-[4vw] md:text-[1.5vw] text-neutral-400">
                                     <span className="text-neutral-700 text-[14px] md:text-xl mr-2 md:mr-4">TECH STACK:</span>
-                                    html css js gsap express
+                                    {val.techstack}
                                 </div>
                                 <div className="role py-2 rounded-2xl text-[4vw] md:text-[1.5vw] text-neutral-400">
                                     <span className="text-neutral-700 text-[14px] md:text-xl mr-2 md:mr-4">ROLE:</span>
-                                    Front-end Developer
+                                    {val.role}
                                 </div>
                             </div>
                         </div>

@@ -27,18 +27,18 @@ const Contact = () => {
         </h2>
         <div className="contactlink h-auto w-full flex flex-col md:flex-row justify-center md:justify-end items-center pt-6 md:pt-12 gap-8 md:gap-16">
           <div className="social flex gap-8">
-            <div className="md:h-12 h-8 aspect-square rounded-full relative cursor-pointer flex flex-col items-center">
+            <a href="https://x.com/IshantXmishra18" target="_blank" className="md:h-12  h-8 aspect-square rounded-full relative cursor-pointer flex flex-col items-center">
               <FaTwitter className='h-full w-full text-black' />
               <h1 className='whitespace-nowrap text-[3vw] md:text-base'>Twitter</h1>
-            </div>
-            <div className="md:h-12 h-8 aspect-square rounded-full relative cursor-pointer flex flex-col items-center">
+            </a>
+            <a href="https://github.com/Ishantmishra18" target="_blank" className="md:h-12 h-8 aspect-square rounded-full relative cursor-pointer flex flex-col items-center">
               <FaGithub className='h-full w-full text-black' />
               <h1 className='whitespace-nowrap text-[3vw] md:text-base'>GitHub</h1>
-            </div>
-            <div className="md:h-12 h-8 aspect-square rounded-full relative cursor-pointer flex flex-col items-center">
+            </a>
+            <a href="https://www.instagram.com/ishantmishra18/" target="_blank" className="md:h-12 h-8 aspect-square rounded-full relative cursor-pointer flex flex-col items-center">
               <FaInstagram className='h-full w-full text-black' />
               <h1 className='whitespace-nowrap text-[3vw] md:text-base'>Instagram</h1>
-            </div>
+            </a>
           </div>
           <Button className="text-[3vw] md:text-base" label='Hire Me' />
         </div>

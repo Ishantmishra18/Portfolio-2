@@ -104,7 +104,7 @@ transform: scale(1.1);
   position: block; 
 }
 
-.social div h1{
+.social a h1{
   color: black;
   opacity: 0;
   transition: 0.4s;
@@ -115,7 +115,7 @@ transform: scale(1.1);
 
   
 }
-.social div:hover h1 {
+.social a:hover h1 {
   opacity: 1;
   transform: translate(-50%,13px );
 
