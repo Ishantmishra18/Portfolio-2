@@ -6,12 +6,16 @@ import Button from '../button';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const handleSendMessage = () => {
+  window.location.href = 'mailto:ishant8mishra@gmail.com';  // Opens Gmail with pre-filled email
+};
+
 const Contact = () => {
   
 
   return (
     <div className=' select-none contactpage overflow-x-hidden w-screen h-auto md:h-[70vh] py-[6vh] bg-gray-60 p-6 flex flex-col md:flex-row items-center relative bg-white'>
-      <div className="absolute bottom-2 right-4 md:bottom-0 md:right-10 text-center md:text-left">
+      <div className="fixed bottom-2 right-4 md:bottom-0 md:right-10 text-center md:text-left">
         <h1 className='uppercase text-[2vw] md:text-[1vw] text-neutral-600'>designed by me</h1>
         <h1 className='uppercase text-[2vw] md:text-[1vw] text-neutral-600'>developed by me</h1>
       </div>
@@ -40,7 +44,7 @@ const Contact = () => {
               <h1 className='whitespace-nowrap text-[3vw] md:text-base'>Instagram</h1>
             </a>
           </div>
-          <Button className="text-[3vw] md:text-base" label='Hire Me' />
+          <Button className="text-[3vw] md:text-base" label='Hire Me' onClick={handleSendMessage} />
         </div>
       </div>
     </div>

@@ -28,7 +28,7 @@ z-index: 100;
 }
 .actions button:hover{
 color: white;
-background-color: black;
+background-color: rgb(10, 10, 10);
 transform: translateY(4px);
 }
 
