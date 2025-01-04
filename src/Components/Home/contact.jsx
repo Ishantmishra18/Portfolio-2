@@ -26,8 +26,8 @@ const Contact = () => {
       </div>
       <div className="h-full w-full md:w-[60vw] p-6 flex flex-col items-center md:items-end relative md:right-40 uppercase text-white">
         <h2 className='mix-blend-difference z-10 tracking-tighter leading-[12vw] md:leading-[120px] text-[12vw] md:text-[7vw] text-center md:text-right'>
-          <h1 className='uptext'>Lets</h1>
-          <h2 className='relative downtext block md:inline md:left-20'>Connect :{")"}</h2>
+          <h1 className='uptext font1'>Lets</h1>
+          <h2 className='relative downtext block md:inline md:left-20 font1'>Connect :{")"}</h2>
         </h2>
         <div className="contactlink h-auto w-full flex flex-col md:flex-row justify-center md:justify-end items-center pt-6 md:pt-12 gap-8 md:gap-16">
           <div className="social flex gap-8">

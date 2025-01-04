@@ -33,11 +33,6 @@ const Navbar = () => {
       <div className="logo h-full aspect-square">
         <img src="/feature/logo.png" alt="" className='h-full w-full' />
       </div>
-      <div className="navright flex gap-10 items-center">
-        <div className="mix-blend-darken">About Me</div>
-        <div className="mix-blend-darken"> Projects</div>
-        <div className="mix-blend-darken">Contact Me</div>
-      </div>
     </div>
   );
 };

@@ -59,10 +59,10 @@ const LandingPage = () => {
     <div className="select-none bg-white overflow-x-hidden w-screen h-screen md:pt-[18vh] pt-[10vh] md:pb-0 pb-[6vh] flex flex-col justify-between">
       <div className="landcont flex flex-col md:flex-row items-start justify-between px-[5%]">
         <div className="landleft w-auto relative z-30 mix-blend-difference text-white">
-          <h1 className="textup text-[14vw] md:text-[7vw] leading-[15vw] md:leading-[10vw] uppercase ml-4 md:ml-32 tracking-tighter scale-y-12 mix-blend-difference whitespace-nowrap">
+          <h1 className="textup font1 text-[14vw] md:text-[7vw] uppercase ml-4 md:ml-32 mix-blend-difference whitespace-nowrap">
             I create
           </h1>
-          <h1 className="textdown text-[14vw] md:text-[7vw] uppercase mt-[-4vw] flex flex-col ml-[18vw] md:ml-[21vw] items-start tracking-tighter whitespace-nowrap scale-y-12">
+          <h1 className="textdown font1 text-[14vw] md:text-[8vw] uppercase mt-[-4vw] flex flex-col ml-[18vw] md:ml-[21vw] items-start whitespace-nowrap">
             websites
             <h4 className="text-[4.5vw] md:text-[2vw] mt-[-6vw] md:mt-[-3vw] tracking-normal">for you</h4>
           </h1>
@@ -75,7 +75,7 @@ const LandingPage = () => {
           />
         </div>
       </div>
-      <div className="actions w-screen h-[20vh] border-t-[1.5px] border-gray-400 flex flex-col md:flex-row pt-2 justify-start px-[20%] items-center gap-20 md:gap-20">
+      <div className="actions w-screen h-[20vh] border-t-[1.5px] border-gray-400 flex flex-col md:flex-row pt-2 justify-start px-[20%] items-center gap-6 md:gap-20">
         <Button label="download CV" className="h-[6vh] md:h-[8vh]" onClick={handleDownloadCV} />
         <button className="text-[5vw] md:text-base" onClick={handleSendMessage}>hire me!</button>
       </div>

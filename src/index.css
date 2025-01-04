@@ -2,11 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'morqueen';
+  src: url('./assets/morqueen.otf') format('truetype');
+  font-weight: normal; /* or bold if it's a bold font */
+  font-style: normal;  /* or italic if it's an italic font */
+}
+
+.font1{
+ font-family: "morqueen", sans-serif;
+}
+
 body {
   overflow-x: hidden; 
   padding: 0;
   margin: 0;
-  font-family: "Kanit", sans-serif;
 }
 
 .navright div{

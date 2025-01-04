@@ -27,6 +27,15 @@ const Projects = () => {
         date:'Nov 2024 - going...',
         techstack:'ReactJs NodeJs Express MongoDB',
         role:'Full Stack Developer'
+    },{
+        name:'Buckshot',
+        subtitle:'multiplayer game',
+        des:"Developed a real-time multiplayer game inspired by 'Buckshot Roulette' using Node.js, Socket.io, and React. The game includes real-time player interactions, and randomized gameplay mechanics, with a responsive UI built using tailwindCSS. This project demonstrates skills in full-stack development and real-time web applications.",
+        github:'https://github.com/Ishantmishra18/buckShot',
+        hosted:'https://buckshot-1-frontend.onrender.com',
+        date:'2nd Dec - 28th Dec 2024...',
+        techstack:'ReactJs NodeJs Express Socket.io',
+        role:'Full Stack Developer'
     } 
 ]
 
@@ -47,7 +56,7 @@ const Projects = () => {
     return (
         <div className='h-auto pb-32 bg-neutral-900 proPage w-screen md:rounded-t-[60px] rounded-t-xl text-white pt-[10vh]'>
             <div className="protitle w-screen h-[40vh] md:rounded-t-[60px] rounded-t-xl absolute text-[9vw] md:text-[6vw] md:mt-2 mt-10 text-white bg-neutral-900 flex flex-col items-center">
-                <h1 className="uppercase">projects</h1>
+                <h1 className="uppercase font1">projects</h1>
             </div>
             {projects.map((val, key) => (
                 <div
@@ -56,7 +65,7 @@ const Projects = () => {
                 >
 
                     <div className={`proname pointer-events-none md:sticky top-[30%] text-[8vw] md:text-[6vw] z-30 flex flex-col ${key%2===0?'left-[80vw] items-end':'right-[80vw] items-start'}`}>
-                        <h2 className='uppercase'>{val.name}</h2>
+                        <h2 className='uppercase font1'>{val.name}</h2>
                         <h2 className='text-[6vw] md:text-[4vw] md:mt-[-3vh] mt-[-1vh]'>{val.subtitle}</h2>
                         <h2 className="date text-[4vw] md:text-[1.4vw] text-neutral-600 md:mt-[-3vh] mt-[-1vh]">{val.date}</h2>
                     </div>
