@@ -87,16 +87,12 @@ transform: scale(1.1);
   border-bottom: 1px solid black;
   border-radius: 0px;
   outline: none;
-
-
 }
+
 .procont{
   box-shadow: 12px 12px 10px rgb(0, 0, 0);
 }
 
-.skills{
-  font-family:sans-serif;
-}
 
 .chesscont{
   filter:grayscale(1) ;
@@ -158,7 +154,13 @@ transform: scale(1.1);
   .navright{
     display:none;
   }
-  
+
+  .maincont{
+    align-items: center;
+  }
+  .proname{
+    align-items: start;
+  }
   .chesscont{
     height:30vh
   }

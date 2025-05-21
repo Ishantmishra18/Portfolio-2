@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -32,6 +33,10 @@ const Navbar = () => {
     >
       <div className="logo h-full aspect-square">
         <img src="/feature/logo.png" alt="" className='h-full w-full' />
+      </div>
+
+      <div className="navlink flex gap-3">
+        
       </div>
     </div>
   );

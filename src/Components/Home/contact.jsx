@@ -12,7 +12,7 @@ const handleSendMessage = () => {
 
 const Contact = () => {
   
-
+  
   return (
     <div className=' select-none contactpage overflow-x-hidden w-screen h-auto md:h-[70vh] py-[6vh] bg-gray-60 p-6 flex flex-col md:flex-row items-center relative bg-white'>
       <div className="fixed bottom-2 right-4 md:bottom-0 md:right-10 text-center md:text-left">
