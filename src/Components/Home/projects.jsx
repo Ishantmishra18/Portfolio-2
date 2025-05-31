@@ -33,10 +33,19 @@ const Projects = () => {
         des:"Developed a real-time multiplayer game inspired by 'Buckshot Roulette' using Node.js, Socket.io, and React. The game includes real-time player interactions, and randomized gameplay mechanics, with a responsive UI built using tailwindCSS. This project demonstrates skills in full-stack development and real-time web applications.",
         github:'https://github.com/Ishantmishra18/buckShot',
         hosted:'https://buckshot-1-frontend.onrender.com',
-        date:'2nd Dec - 28th Dec 2024...',
+        date:'2nd Dec - 28th Dec 2024',
         techstack:'ReactJs NodeJs Express Socket.io',
         role:'Full Stack Developer'
-    } 
+    },{
+        name:'Guess the Faker',
+        subtitle:'imposter muliplyer game',
+        des:"Developed a beutiful looking space themed real time multiplayer game you can play with your friends (atleast 3 are required) , it has create and join room functionaliy many parallel games can be played at a time by different users , fully responsive for mobile devices",
+        github:'https://github.com/Ishantmishra18/GuesstheFaker',
+        hosted:'https://guessthefaker.onrender.com',
+        date:'15th May - 31th May 2025',
+        techstack:'ReactJs NodeJs Express Socket.io FramerMotion',
+        role:'Full Stack Developer'
+    }
 ]
 
 
