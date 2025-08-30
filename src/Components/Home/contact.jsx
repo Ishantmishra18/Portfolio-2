@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
-import { FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
+import {  FaGithub, FaInstagram } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from '../button';
@@ -32,8 +34,8 @@ const Contact = () => {
         <div className="contactlink h-auto w-full flex flex-col md:flex-row justify-center md:justify-end items-center pt-6 md:pt-12 gap-8 md:gap-16">
           <div className="social flex gap-8">
             <a href="https://x.com/IshantXmishra18" target="_blank" className="md:h-12  h-8 aspect-square rounded-full relative cursor-pointer flex flex-col items-center">
-              <FaTwitter className='h-full w-full text-black' />
-              <h1 className='whitespace-nowrap text-[3vw] md:text-base'>Twitter</h1>
+              <BsTwitterX className='h-full w-full text-black' />
+              <h1 className='whitespace-nowrap text-[3vw] md:text-base'>X.com</h1>
             </a>
             <a href="https://github.com/Ishantmishra18" target="_blank" className="md:h-12 h-8 aspect-square rounded-full relative cursor-pointer flex flex-col items-center">
               <FaGithub className='h-full w-full text-black' />

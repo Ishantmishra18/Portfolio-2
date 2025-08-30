@@ -35,7 +35,7 @@ const Navbar = () => {
         <img src="/feature/logo.png" alt="" className='h-full w-full' />
       </div>
 
-      <div className="navlink flex gap-3">
+      <div className="navlink flex gap-3  text-white">
         
       </div>
     </div>

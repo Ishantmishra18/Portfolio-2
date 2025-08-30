@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaGithub } from "react-icons/fa6";
 import { TbView360 } from "react-icons/tb";
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
@@ -38,7 +39,7 @@ const Projects = () => {
         role:'Full Stack Developer'
     },{
         name:'Guess the Faker',
-        subtitle:'imposter muliplyer game',
+        subtitle:'multiplayer game',
         des:"Developed a beutiful looking space themed real time multiplayer game you can play with your friends (atleast 3 are required) , it has create and join room functionaliy many parallel games can be played at a time by different users , fully responsive for mobile devices",
         github:'https://github.com/Ishantmishra18/GuesstheFaker',
         hosted:'https://guessthefaker.onrender.com',
@@ -101,14 +102,15 @@ useEffect(() => {
                                 <img src={`/pro/${key+1}/mobile.png`} alt="" className='object-cover h-full w-full rounded-2xl shadow-xl' />
 
                             </div>
-                            <div className="absolute h-[20%] w-auto z-30 bottom-0 left-0 flex items-end p-3 gap-2">
+                            <div className="absolute h-[20%] w-auto z-30 bottom-0 left-0 flex items-end md:p-3  gap-2">
                                 <a href={val.github} target="_blank" className="gitcont h-full aspect-square rounded-full p-1 bg-neutral-800 hover:translate-y-2 duration-300 cursor-pointer">
                                     <FaGithub className='h-full w-full'/>
                                 </a>
-                                <a href={val.hosted} target="_blank" className={`px-6 shadow-xl py-1 gap-5 flex items-center rounded-full bg-neutral-800/85 backdrop-blur-md ${val.hosted===''?'hidden':''} hover:translate-y-2 duration-300 cursor-pointer`}>
-                                    <TbView360 className='h-12 text-2xl'/>
-                                    <h2 className=' whitespace-nowrap'>Visit Site</h2>
+                                <a href={val.hosted} target="_blank" className={`md:px-6 px-3 h-[80%] shadow-xl py-1 gap-5 flex items-center rounded-full border-neutral-800 md:border-4 border-2 bg-neutral-200/85 text-neutral-700 backdrop-blur-md ${val.hosted===''?'hidden':''} hover:translate-y-2 duration-300 cursor-pointer`}>
+                                    <TbView360 className=' md:text-2xl text-lg'/>
+                                    <h2 className=' whitespace-nowrap md:font-bold'>Visit Site</h2>
                                 </a>
+                               
                             </div>
                         
                             <img src={`/pro/${key + 1}/screen.png`} alt="" className='w-full h-full md:object-cover object-contain z-10 duration-200' />
@@ -116,7 +118,7 @@ useEffect(() => {
                         <div className="prodown w-[100%] h-auto bg-purple-80 py-5 flex flex-col items-start">
                             <h1 className="text-[14px] md:text-xl text-neutral-700 mt-2 px-4 md:px-10 uppercase">About Project</h1>
                             <p className="text-[4vw] md:text-[1.5vw] text-neutral-400 mt-1 px-4 md:px-10">{val.des}</p>
-                            <div className="prodes md:mt-10 mt-4 md:pt-10 pt-4 border-t-2 border-neutral-800 px-4 md:px-10  flex flex-col md:flex-row w-full justify-start md:justify-start gap-4 md:gap-32">
+                            <div className="prodes border-t-neutral-700 md:mt-10 mt-4 md:pt-10 pt-4 border-t-2 border-neutral-800 px-4 md:px-10  flex flex-col md:flex-row w-full justify-start md:justify-start gap-4 md:gap-32">
                                 <div className="techstack py-2 rounded-2xl text-[4vw] md:text-[1.5vw] text-neutral-400">
                                     <span className="text-neutral-700 text-[14px] md:text-xl mr-2 md:mr-4">TECH STACK:</span>
                                     {val.techstack}
