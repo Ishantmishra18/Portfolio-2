@@ -46,7 +46,7 @@ const Contact = () => {
               <h1 className='whitespace-nowrap text-[3vw] md:text-base'>Instagram</h1>
             </a>
           </div>
-          <Button className="text-[3vw] md:text-base" label='Hire Me' onClick={handleSendMessage} />
+          <Button className="text-[3vw] md:text-base" label='Connect!' onClick={handleSendMessage} />
         </div>
       </div>
     </div>

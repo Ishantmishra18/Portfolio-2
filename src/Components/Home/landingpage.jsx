@@ -77,7 +77,7 @@ const LandingPage = () => {
       </div>
       <div className="actions w-screen h-[20vh] border-t-[1.5px] border-gray-400 flex flex-col md:flex-row pt-2 justify-start px-[20%] items-center gap-6 md:gap-20">
         <Button label="download CV" className="h-[6vh] md:h-[8vh]" onClick={handleDownloadCV} />
-        <button className="text-[5vw] md:text-base" onClick={handleSendMessage}>hire me!</button>
+        <button className="text-[5vw] md:text-base" onClick={handleSendMessage}>Let's do this</button>
       </div>
     </div>
   );
