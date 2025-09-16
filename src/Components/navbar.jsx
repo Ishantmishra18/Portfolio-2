@@ -35,8 +35,10 @@ const Navbar = () => {
         <img src="/feature/logo.png" alt="" className='h-full w-full' />
       </div>
 
-      <div className="navlink flex gap-3  text-white">
-        
+      <div className="navlink md:text-xl text-sm flex gap-6  text-white">
+        {/* <h3>projects</h3>
+        <h3>work</h3>
+        <Link to='/me'>about me</Link> */}
       </div>
     </div>
   );
