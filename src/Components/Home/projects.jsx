@@ -42,7 +42,7 @@ const Projects = () => {
     },{
         name:'Guess the Faker',
         subtitle:'multiplayer game',
-        des:"Developed a beutiful looking space themed real time multiplayer game you can play with your friends (atleast 3 are required) , it has create and join room functionaliy many parallel games can be played at a time by different users , fully responsive for mobile devices",
+        des:"A space-themed social deduction game where players receive questions, but one imposter gets a different question! After answers are revealed, players must debate and identify the imposter while the imposter tries to blend in. Gather at least 3 friends to play this thrilling game of deception and deduction. Features real-time gameplay, room creation/joining, and mobile responsiveness.",
         github:'https://github.com/Ishantmishra18/GuesstheFaker',
         hosted:'https://guessthefaker.onrender.com',
         date:'15th May - 31th May 2025',
