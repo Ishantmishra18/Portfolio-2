@@ -75,7 +75,7 @@ const ArtGallery = () => {
           return (
             <div
               key={art.id}
-              className={`art-image absolute rounded-xl shadow-2xl overflow-hidden ${sizeClass}`}
+              className={`art-image absolute rounded-lg shadow-2xl overflow-hidden ${sizeClass}`}
               style={{
                 top: art.top,
                 left: art.left,
